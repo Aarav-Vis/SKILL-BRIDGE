@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SkillBridge — Find. Connect. Grow.</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --purple: #7657ff;
+      --deep-purple: #4d32c8;
+      --black: #0b0b0f;
+      --off-white: #f7f6fb;
+      --muted: #aaa6bb;
+    }
+
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--black);
+      color: white;
+      font-family: "DM Sans", sans-serif;
+    }
+
+    h1, h2, h3, .display {
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .purple-text {
+      color: var(--purple);
+    }
+
+    .purple-gradient {
+      background: linear-gradient(135deg, #8b70ff, #5738d5);
+    }
+
+    .outline-button {
+      border: 1px solid rgba(255,255,255,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .outline-button:hover {
+      background: white;
+      color: black;
+      border-color: white;
+    }
+
+    .primary-button {
+      background: var(--purple);
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .primary-button:hover {
+      background: white;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    .magazine-card {
+      background: #15151d;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .magazine-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--purple);
+    }
+
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(118,87,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(118,87,255,0.08) 1px, transparent 1px);
+      background-size: 55px 55px;
+    }
+
+    .number {
+      font-family: "Space Grotesk", sans-serif;
+      color: var(--purple);
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .section-label {
+      letter-spacing: 0.22em;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--purple);
+      text-transform: uppercase;
+    }
+
+    .logo-frame {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 80px rgba(118,87,255,0.2);
+    }
+
+    .logo-frame img {
+      width: 100%;
+      max-width: 620px;
+      display: block;
+      margin: auto;
+    }
+
+    .fade-line {
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.25),
+        transparent
+      );
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--purple);
+      box-shadow: 0 0 0 2px rgba(118,87,255,0.2);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-black/85 backdrop-blur-lg border-b border-white/10">
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="#top" class="text-xl md:text-2xl font-bold tracking-tight">
+        SKILL<span class="purple-text">BRIDGE</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm text-gray-300">
+        <a href="#story" class="hover:text-white transition">Our Story</a>
+        <a href="#how-it-works" class="hover:text-white transition">How It Works</a>
+        <a href="#ecosystem" class="hover:text-white transition">The Network</a>
+      </div>
+
+      <a href="#contact" class="primary-button px-5 py-3 rounded-full text-sm font-semibold">
+        Stay Updated ↗
+      </a>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <main id="top">
+
+    <section class="hero-grid min-h-screen pt-36 pb-20 px-6">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+          <!-- HERO TEXT -->
+          <div>
+            <p class="section-label mb-6">
+              A new opportunity network
+            </p>
+
+            <h1 class="display text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight">
+              Find your next
+              <span class="purple-text">opportunity.</span>
+            </h1>
+
+            <p class="mt-8 text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl">
+              SkillBridge connects students, schools and organisers through
+              meaningful opportunities, stronger networks and experiences
+              that help people discover what comes next.
+            </p>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+              <a href="#contact" class="primary-button px-7 py-4 rounded-full font-semibold">
+                Join the Waitlist →
+              </a>
+
+              <a href="#how-it-works" class="outline-button px-7 py-4 rounded-full font-semibold">
+                Explore the Idea
+              </a>
+            </div>
+
+            <div class="mt-10 flex items-center gap-4 text-sm text-gray-400">
+              <span class="w-10 h-px bg-purple-500"></span>
+              Built around discovery, connection and growth.
+            </div>
+          </div>
+
+          <!-- LARGE LOGO -->
+          <div class="flex justify-center">
+            <div class="logo-frame w-full max-w-2xl">
+              <img
+                src="logo.png"
+                alt="SkillBridge logo"
+              />
+            </div>
+          </div>
+
+        </div>
+
+        <div class="fade-line mt-20"></div>
+
+        <div class="flex flex-wrap justify-between gap-6 mt-8 text-sm text-gray-400">
+          <span>01 / Discover</span>
+          <span>02 / Connect</span>
+          <span>03 / Participate</span>
+          <span>04 / Grow</span>
+          <span class="text-white font-semibold">COMING SOON</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- BRAND STORY -->
+    <section id="story" class="bg-[#f7f6fb] text-black px-6 py-24 md:py-32">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+
+          <div class="lg:col-span-4">
+            <p class="section-label !text-purple-700 mb-5">
+              01 — Our Story
+            </p>
+
+            <h2 class="display text-4xl md:text-6xl font-bold leading-tight">
+              Built from a
+              <span class="text-purple-700">real problem.</span>
+            </h2>
+          </div>
+
+          <div class="lg:col-span-7 lg:col-start-6">
+            <p class="text-xl md:text-2xl leading-relaxed font-medium">
+              I'm Aaravan Balachander, a Class 10 student at Vellore
+              International School, Chennai. After repeatedly discovering
+              competitions, conferences and experiences through scattered
+              sources and personal connections, I realised that valuable
+              opportunities are often missed simply because people hear about
+              them too late.
+            </p>
+
+            <p class="mt-7 text-lg leading-relaxed text-gray-600">
+              SkillBridge was created to make opportunity discovery more
+              accessible and connected — bringing students looking to grow,
+              schools creating experiences and organisers offering them into
+              one ecosystem.
+            </p>
+
+            <div class="mt-10 border-l-4 border-purple-600 pl-6">
+              <p class="text-2xl font-semibold">
+                More opportunities should never depend on who you happen to know.
+              </p>
+            </div>
+
+            <div class="mt-10">
+              <p class="font-bold text-lg">Aaravan Balachander</p>
+              <p class="text-sm text-gray-500 mt-1">
+                Founder & Student Builder
+              </p>
+              <p class="text-sm text-gray-500">
+                Class 10 · Vellore International School · Chennai
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="px-6 py-24 md:py-32 bg-black">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="max-w-3xl">
+          <p class="section-label mb-5">
+            02 — How It Works
+          </p>
+
+          <h2 class="display text-4xl md:text-6xl font-bold leading-tight">
+            One network.
+            <span class="purple-text">Three sides.</span>
+          </h2>
+
+          <p class="mt-6 text-lg text-gray-400 leading-relaxed">
+            SkillBridge brings together the people who discover opportunities,
+            the institutions that create them and the organisers who make them
+            happen.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-16" id="ecosystem">
+
+          <!-- STUDENTS -->
+          <article class="magazine-card rounded-3xl p-8">
+            <div class="number mb-8">01</div>
+
+            <div class="text-4xl mb-6">✦</div>
+
+            <h3 class="text-3xl font-bold mb-4">
+              Students
+            </h3>
+
+            <p class="text-gray-400 leading-relaxed">
+              Discover competitions, MUNs, workshops, internships,
+              volunteering opportunities and experiences matched to your
+              interests and ambitions.
+            </p>
+
+            <div class="mt-8 pt-6 border-t border-white/10 text-sm text-purple-300">
+              Discover → Participate → Grow
+            </div>
+          </article>
+
+          <!-- SCHOOLS -->
+          <article class="magazine-card rounded-3xl p-8">
+            <div class="number mb-8">02</div>
+
+            <div class="text-4xl mb-6">▦</div>
+
+            <h3 class="text-3xl font-bold mb-4">
+              Schools
+            </h3>
+
+            <p class="text-gray-400 leading-relaxed">
+              Connect with other schools, promote inter-school events,
+              coordinate participation and create stronger student
+              opportunities.
+            </p>
+
+            <div class="mt-8 pt-6 border-t border-white/10 text-sm text-purple-300">
+              Host → Connect → Collaborate
+            </div>
+          </article>
+
+          <!-- ORGANISERS -->
+          <article class="magazine-card rounded-3xl p-8">
+            <div class="number mb-8">03</div>
+
+            <div class="text-4xl mb-6">↗</div>
+
+            <h3 class="text-3xl font-bold mb-4">
+              Organisers
+            </h3>
+
+            <p class="text-gray-400 leading-relaxed">
+              Reach relevant students and schools through trusted listings,
+              clearer communication and a more connected participation
+              process.
+            </p>
+
+            <div class="mt-8 pt-6 border-t border-white/10 text-sm text-purple-300">
+              List → Reach → Engage
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PROCESS -->
+    <section class="bg-[#f7f6fb] text-black px-6 py-24 md:py-32">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+          <div>
+            <p class="section-label !text-purple-700 mb-5">
+              The Experience
+            </p>
+
+            <h2 class="display text-4xl md:text-6xl font-bold leading-tight">
+              From curiosity
+              <span class="text-purple-700">to possibility.</span>
+            </h2>
+
+            <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+              Whether you're searching for your next event, hosting an
+              inter-school experience or reaching a new audience, SkillBridge
+              is designed to make the journey clearer.
+            </p>
+          </div>
+
+          <div class="space-y-5">
+
+            <div class="flex gap-5 items-start border-b border-gray-300 pb-6">
+              <span class="text-purple-700 font-bold text-xl">01</span>
+              <div>
+                <h3 class="text-xl font-bold">Discover</h3>
+                <p class="text-gray-600 mt-1">
+                  Explore relevant and verified opportunities.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-5 items-start border-b border-gray-300 pb-6">
+              <span class="text-purple-700 font-bold text-xl">02</span>
+              <div>
+                <h3 class="text-xl font-bold">Connect</h3>
+                <p class="text-gray-600 mt-1">
+                  Find the right people, schools and organisers.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-5 items-start border-b border-gray-300 pb-6">
+              <span class="text-purple-700 font-bold text-xl">03</span>
+              <div>
+                <h3 class="text-xl font-bold">Participate</h3>
+                <p class="text-gray-600 mt-1">
+                  Turn opportunities into real experiences.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-5 items-start">
+              <span class="text-purple-700 font-bold text-xl">04</span>
+              <div>
+                <h3 class="text-xl font-bold">Grow</h3>
+                <p class="text-gray-600 mt-1">
+                  Build skills, relationships and a stronger future.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- WAITLIST / CONTACT -->
+    <section id="contact" class="px-6 py-24 md:py-32 purple-gradient">
+      <div class="max-w-5xl mx-auto text-center">
+
+        <p class="text-xs tracking-[0.3em] uppercase font-bold text-white/70 mb-6">
+          03 — Stay Connected
+        </p>
+
+        <h2 class="display text-4xl md:text-7xl font-bold leading-tight">
+          Be part of what
+          <br />
+          comes next.
+        </h2>
+
+        <p class="mt-6 text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
+          Join the SkillBridge waitlist and be among the first to hear when
+          the platform launches.
+        </p>
+
+        <!-- EMAIL SUBSCRIPTION -->
+        <!-- FormSubmit sends submissions to your email after activation. -->
+        <form
+          action="https://formsubmit.co/aaravanbalachander@gmail.com"
+          method="POST"
+          class="mt-10 max-w-xl mx-auto"
+        >
+
+          <input type="hidden" name="_subject" value="New SkillBridge Waitlist Signup">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://skillbridge-coming-soon.github.io/">
+
+          <div class="flex flex-col sm:flex-row gap-3">
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+              class="flex-1 px-5 py-4 rounded-full bg-white text-black border-2 border-transparent"
+            />
+
+            <button
+              type="submit"
+              class="px-7 py-4 rounded-full bg-black text-white font-bold hover:bg-white hover:text-black transition"
+            >
+              Join Waitlist →
+            </button>
+
+          </div>
+
+          <p class="text-sm text-white/70 mt-4">
+            No spam. Just updates when SkillBridge gets closer to launch.
+          </p>
+
+        </form>
+
+        <div class="mt-12">
+          <a
+            href="mailto:aaravanbalachander@gmail.com?subject=SkillBridge%20Enquiry"
+            class="inline-flex items-center gap-3 bg-white text-black px-7 py-4 rounded-full font-bold hover:bg-black hover:text-white transition"
+          >
+            Contact Us ✉
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-black px-6 py-10 border-t border-white/10">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="flex flex-col md:flex-row justify-between gap-6">
+
+          <div>
+            <p class="text-xl font-bold">
+              SKILL<span class="purple-text">BRIDGE</span>
+            </p>
+
+            <p class="text-sm text-gray-500 mt-2">
+              Find. Connect. Grow.
+            </p>
+          </div>
+
+          <div class="text-sm text-gray-400">
+            <p>Founded by Aaravan Balachander</p>
+            <p class="mt-1">Chennai, India</p>
+            <a
+              href="mailto:aaravanbalachander@gmail.com"
+              class="purple-text hover:text-white transition"
+            >
+              aaravanbalachander@gmail.com
+            </a>
+          </div>
+
+        </div>
+
+        <div class="fade-line mt-8 mb-6"></div>
+
+        <p class="text-xs text-gray-600">
+          © 2026 SkillBridge. Building bridges to better opportunities.
+        </p>
+
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>

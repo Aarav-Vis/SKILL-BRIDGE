@@ -23,6 +23,7 @@
 
     * {
       scroll-behavior: smooth;
+      box-sizing: border-box;
     }
 
     body {
@@ -42,17 +43,6 @@
 
     .purple-gradient {
       background: linear-gradient(135deg, #8b70ff, #5738d5);
-    }
-
-    .outline-button {
-      border: 1px solid rgba(255,255,255,0.3);
-      transition: all 0.3s ease;
-    }
-
-    .outline-button:hover {
-      background: white;
-      color: black;
-      border-color: white;
     }
 
     .primary-button {
@@ -110,9 +100,24 @@
 
     .logo-frame img {
       width: 100%;
-      max-width: 620px;
+      max-width: 720px;
       display: block;
       margin: auto;
+    }
+
+    .small-logo {
+      background: white;
+      padding: 0.7rem;
+      border-radius: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .small-logo img {
+      width: 110px;
+      height: auto;
+      display: block;
     }
 
     .fade-line {
@@ -130,6 +135,35 @@
       border-color: var(--purple);
       box-shadow: 0 0 0 2px rgba(118,87,255,0.2);
     }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #bcb8ca;
+      transition: all 0.25s ease;
+    }
+
+    .social-link:hover {
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .social-icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+
+    .contact-link {
+      color: #bcb8ca;
+      transition: color 0.25s ease;
+      word-break: break-word;
+    }
+
+    .contact-link:hover {
+      color: var(--purple);
+    }
   </style>
 </head>
 
@@ -138,8 +172,11 @@
   <!-- NAVIGATION -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-black/85 backdrop-blur-lg border-b border-white/10">
     <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-      <a href="#top" class="text-xl md:text-2xl font-bold tracking-tight">
-        SKILL<span class="purple-text">BRIDGE</span>
+
+      <a href="#top" class="flex items-center gap-3">
+        <span class="small-logo">
+          <img src="logo.png" alt="SkillBridge logo">
+        </span>
       </a>
 
       <div class="hidden md:flex items-center gap-8 text-sm text-gray-300">
@@ -149,15 +186,17 @@
       </div>
 
       <a href="#contact" class="primary-button px-5 py-3 rounded-full text-sm font-semibold">
-        Stay Updated ↗
+        Join the Waitlist
       </a>
+
     </nav>
   </header>
 
 
-  <!-- HERO -->
+  <!-- MAIN CONTENT -->
   <main id="top">
 
+    <!-- HERO SECTION -->
     <section class="hero-grid min-h-screen pt-36 pb-20 px-6">
       <div class="max-w-7xl mx-auto">
 
@@ -165,6 +204,7 @@
 
           <!-- HERO TEXT -->
           <div>
+
             <p class="section-label mb-6">
               A new opportunity network
             </p>
@@ -180,13 +220,9 @@
               that help people discover what comes next.
             </p>
 
-            <div class="mt-10 flex flex-wrap gap-4">
-              <a href="#contact" class="primary-button px-7 py-4 rounded-full font-semibold">
+            <div class="mt-10">
+              <a href="#contact" class="primary-button inline-block px-7 py-4 rounded-full font-semibold">
                 Join the Waitlist →
-              </a>
-
-              <a href="#how-it-works" class="outline-button px-7 py-4 rounded-full font-semibold">
-                Explore the Idea
               </a>
             </div>
 
@@ -194,9 +230,11 @@
               <span class="w-10 h-px bg-purple-500"></span>
               Built around discovery, connection and growth.
             </div>
+
           </div>
 
-          <!-- LARGE LOGO -->
+
+          <!-- LARGE HERO LOGO -->
           <div class="flex justify-center">
             <div class="logo-frame w-full max-w-2xl">
               <img
@@ -222,13 +260,14 @@
     </section>
 
 
-    <!-- BRAND STORY -->
+    <!-- OUR STORY -->
     <section id="story" class="bg-[#f7f6fb] text-black px-6 py-24 md:py-32">
       <div class="max-w-7xl mx-auto">
 
         <div class="grid lg:grid-cols-12 gap-12 items-start">
 
           <div class="lg:col-span-4">
+
             <p class="section-label !text-purple-700 mb-5">
               01 — Our Story
             </p>
@@ -237,9 +276,20 @@
               Built from a
               <span class="text-purple-700">real problem.</span>
             </h2>
+
+            <div class="mt-10">
+              <img
+                src="logo.png"
+                alt="SkillBridge logo"
+                class="w-full max-w-xs"
+              />
+            </div>
+
           </div>
 
+
           <div class="lg:col-span-7 lg:col-start-6">
+
             <p class="text-xl md:text-2xl leading-relaxed font-medium">
               I'm Aaravan Balachander, a Class 10 student at Vellore
               International School, Chennai. After repeatedly discovering
@@ -264,13 +314,16 @@
 
             <div class="mt-10">
               <p class="font-bold text-lg">Aaravan Balachander</p>
+
               <p class="text-sm text-gray-500 mt-1">
                 Founder & Student Builder
               </p>
+
               <p class="text-sm text-gray-500">
                 Class 10 · Vellore International School · Chennai
               </p>
             </div>
+
           </div>
 
         </div>
@@ -283,6 +336,7 @@
       <div class="max-w-7xl mx-auto">
 
         <div class="max-w-3xl">
+
           <p class="section-label mb-5">
             02 — How It Works
           </p>
@@ -297,12 +351,15 @@
             the institutions that create them and the organisers who make them
             happen.
           </p>
+
         </div>
+
 
         <div class="grid md:grid-cols-3 gap-6 mt-16" id="ecosystem">
 
           <!-- STUDENTS -->
           <article class="magazine-card rounded-3xl p-8">
+
             <div class="number mb-8">01</div>
 
             <div class="text-4xl mb-6">✦</div>
@@ -320,10 +377,13 @@
             <div class="mt-8 pt-6 border-t border-white/10 text-sm text-purple-300">
               Discover → Participate → Grow
             </div>
+
           </article>
+
 
           <!-- SCHOOLS -->
           <article class="magazine-card rounded-3xl p-8">
+
             <div class="number mb-8">02</div>
 
             <div class="text-4xl mb-6">▦</div>
@@ -341,10 +401,13 @@
             <div class="mt-8 pt-6 border-t border-white/10 text-sm text-purple-300">
               Host → Connect → Collaborate
             </div>
+
           </article>
+
 
           <!-- ORGANISERS -->
           <article class="magazine-card rounded-3xl p-8">
+
             <div class="number mb-8">03</div>
 
             <div class="text-4xl mb-6">↗</div>
@@ -362,6 +425,7 @@
             <div class="mt-8 pt-6 border-t border-white/10 text-sm text-purple-300">
               List → Reach → Engage
             </div>
+
           </article>
 
         </div>
@@ -370,13 +434,14 @@
     </section>
 
 
-    <!-- PROCESS -->
+    <!-- PROCESS SECTION -->
     <section class="bg-[#f7f6fb] text-black px-6 py-24 md:py-32">
       <div class="max-w-7xl mx-auto">
 
         <div class="grid lg:grid-cols-2 gap-16 items-center">
 
           <div>
+
             <p class="section-label !text-purple-700 mb-5">
               The Experience
             </p>
@@ -391,44 +456,57 @@
               inter-school experience or reaching a new audience, SkillBridge
               is designed to make the journey clearer.
             </p>
+
           </div>
+
 
           <div class="space-y-5">
 
             <div class="flex gap-5 items-start border-b border-gray-300 pb-6">
               <span class="text-purple-700 font-bold text-xl">01</span>
+
               <div>
                 <h3 class="text-xl font-bold">Discover</h3>
+
                 <p class="text-gray-600 mt-1">
                   Explore relevant and verified opportunities.
                 </p>
               </div>
             </div>
 
+
             <div class="flex gap-5 items-start border-b border-gray-300 pb-6">
               <span class="text-purple-700 font-bold text-xl">02</span>
+
               <div>
                 <h3 class="text-xl font-bold">Connect</h3>
+
                 <p class="text-gray-600 mt-1">
                   Find the right people, schools and organisers.
                 </p>
               </div>
             </div>
 
+
             <div class="flex gap-5 items-start border-b border-gray-300 pb-6">
               <span class="text-purple-700 font-bold text-xl">03</span>
+
               <div>
                 <h3 class="text-xl font-bold">Participate</h3>
+
                 <p class="text-gray-600 mt-1">
                   Turn opportunities into real experiences.
                 </p>
               </div>
             </div>
 
+
             <div class="flex gap-5 items-start">
               <span class="text-purple-700 font-bold text-xl">04</span>
+
               <div>
                 <h3 class="text-xl font-bold">Grow</h3>
+
                 <p class="text-gray-600 mt-1">
                   Build skills, relationships and a stronger future.
                 </p>
@@ -442,7 +520,7 @@
     </section>
 
 
-    <!-- WAITLIST / CONTACT -->
+    <!-- WAITLIST SECTION -->
     <section id="contact" class="px-6 py-24 md:py-32 purple-gradient">
       <div class="max-w-5xl mx-auto text-center">
 
@@ -461,18 +539,34 @@
           the platform launches.
         </p>
 
-        <!-- EMAIL SUBSCRIPTION -->
-        <!-- FormSubmit sends submissions to your email after activation. -->
+
+        <!-- EMAIL SUBSCRIPTION FORM -->
         <form
+          id="waitlistForm"
           action="https://formsubmit.co/aaravanbalachander@gmail.com"
           method="POST"
+          target="hiddenFrame"
+          onsubmit="showWaitlistMessage()"
           class="mt-10 max-w-xl mx-auto"
         >
 
-          <input type="hidden" name="_subject" value="New SkillBridge Waitlist Signup">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://skillbridge-coming-soon.github.io/">
+          <input
+            type="hidden"
+            name="_subject"
+            value="New SkillBridge Waitlist Signup"
+          >
+
+          <input
+            type="hidden"
+            name="_captcha"
+            value="false"
+          >
+
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          >
 
           <div class="flex flex-col sm:flex-row gap-3">
 
@@ -493,19 +587,86 @@
 
           </div>
 
+
+          <!-- BUILT-IN CONFIRMATION MESSAGE -->
+          <p
+            id="waitlistMessage"
+            class="hidden mt-5 text-white font-semibold"
+            role="status"
+          >
+            ✓ Thanks for joining the SkillBridge waitlist!
+          </p>
+
           <p class="text-sm text-white/70 mt-4">
             No spam. Just updates when SkillBridge gets closer to launch.
           </p>
 
         </form>
 
-        <div class="mt-12">
-          <a
-            href="mailto:aaravanbalachander@gmail.com?subject=SkillBridge%20Enquiry"
-            class="inline-flex items-center gap-3 bg-white text-black px-7 py-4 rounded-full font-bold hover:bg-black hover:text-white transition"
-          >
-            Contact Us ✉
-          </a>
+
+        <!-- CONTACT DETAILS -->
+        <div class="mt-16 pt-10 border-t border-white/25">
+
+          <p class="text-xs tracking-[0.25em] uppercase font-bold text-white/70 mb-7">
+            Connect with SkillBridge
+          </p>
+
+          <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10">
+
+
+            <!-- EMAIL -->
+            <a
+              href="mailto:aaravanbalachander@gmail.com"
+              class="social-link"
+            >
+
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m3 7 9 6 9-6"></path>
+              </svg>
+
+              <span>aaravanbalachander@gmail.com</span>
+
+            </a>
+
+
+            <!-- WHATSAPP -->
+            <a
+              href="https://wa.me/918754822999"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+            >
+
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2a9.8 9.8 0 0 0-8.5 14.7L2 22l5.5-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.4-.2-3.3.8.9-3.2-.3-.4A8 8 0 1 1 12 20Zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.4-.7-2.4-1.3-3.4-2.9-.2-.3.2-.3.5-1 .1-.2.1-.3 0-.5l-.7-1.7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.9 2.6 1 2.6.7 3.1.7.5 0 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3Z"></path>
+              </svg>
+
+              <span>+91 87548 22999</span>
+
+            </a>
+
+
+            <!-- INSTAGRAM -->
+            <a
+              href="https://www.instagram.com/aaravan91/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+            >
+
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+              </svg>
+
+              <span>@aaravan91</span>
+
+            </a>
+
+          </div>
+
         </div>
 
       </div>
@@ -514,29 +675,55 @@
 
     <!-- FOOTER -->
     <footer class="bg-black px-6 py-10 border-t border-white/10">
+
       <div class="max-w-7xl mx-auto">
 
-        <div class="flex flex-col md:flex-row justify-between gap-6">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-8">
 
           <div>
-            <p class="text-xl font-bold">
-              SKILL<span class="purple-text">BRIDGE</span>
-            </p>
 
-            <p class="text-sm text-gray-500 mt-2">
+            <div class="small-logo mb-4">
+              <img src="logo.png" alt="SkillBridge logo">
+            </div>
+
+            <p class="text-sm text-gray-500">
               Find. Connect. Grow.
             </p>
+
           </div>
 
-          <div class="text-sm text-gray-400">
+
+          <div class="text-sm text-gray-400 space-y-2">
+
             <p>Founded by Aaravan Balachander</p>
-            <p class="mt-1">Chennai, India</p>
+
+            <p>Class 10 · Vellore International School</p>
+
+            <p>Chennai, India</p>
+
             <a
               href="mailto:aaravanbalachander@gmail.com"
-              class="purple-text hover:text-white transition"
+              class="contact-link block"
             >
               aaravanbalachander@gmail.com
             </a>
+
+            <a
+              href="tel:+918754822999"
+              class="contact-link block"
+            >
+              +91 87548 22999
+            </a>
+
+            <a
+              href="https://www.instagram.com/aaravan91/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link block"
+            >
+              Instagram: @aaravan91
+            </a>
+
           </div>
 
         </div>
@@ -548,9 +735,34 @@
         </p>
 
       </div>
+
     </footer>
 
   </main>
+
+
+  <!-- HIDDEN FORM FRAME -->
+  <iframe
+    name="hiddenFrame"
+    style="display:none;"
+    title="Waitlist submission"
+  ></iframe>
+
+
+  <!-- WAITLIST CONFIRMATION SCRIPT -->
+  <script>
+    function showWaitlistMessage() {
+      const form = document.getElementById("waitlistForm");
+      const message = document.getElementById("waitlistMessage");
+
+      message.classList.remove("hidden");
+
+      message.textContent =
+        "✓ Thanks for joining the SkillBridge waitlist! We'll be in touch when we launch.";
+
+      form.reset();
+    }
+  </script>
 
 </body>
 </html>
